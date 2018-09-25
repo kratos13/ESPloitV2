@@ -53,15 +53,15 @@ Select Sketch - "Export Compiled Binary".
 Download the  firmware to the ESP-12S chip using one of the following tools.  
 Linux: https://github.com/AprilBrother/esptool  
 
-~!~ For OS X users, you will need to 'erase_flash' before flashing the firmware. ~!~ 
+*~!~ For OS X users, you will need to 'erase_flash' before flashing the firmware. ~!~* 
 
 Open a terminal.  
 
 List available devices ::
-ls /dev/cu.*
+`ls /dev/cu.*`
 
 Erase the device BEFORE flashing ::    
-python esptool.py -p /dev/cu.usbmodemXXXX erase_flash
+`python esptool.py -p /dev/cu.usbmodemXXXX erase_flash`
 
 < Eject the device >
 
