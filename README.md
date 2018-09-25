@@ -48,10 +48,29 @@ Open the ESP_Code sketch from the source folder.
 Select Tools - Board - "Generic ESP8266 Module".  
 Select Tools - Flash Size - "4M (3M SPIFFS)".  
 Select Sketch - "Export Compiled Binary".  
-  
-Now flash the firmware to the ESP-12S chip using one of the following tools.  
+
+
+Download the  firmware to the ESP-12S chip using one of the following tools.  
 Linux: https://github.com/AprilBrother/esptool  
+
+~!~ For OS X users, you will need to 'erase_flash' before flashing the firmware. ~!~ 
+
+Open a terminal.  
+
+List available devices ::
+# ls /dev/cu.*
+
+Erase the device BEFORE flashing ::    
+# python esptool.py -p /dev/cu.usbmodemXXXX erase_flash
+
+< Eject the device >
+
+< Re-insert the device > 
+
+Then, continue with flashing the device. 
+
 Example: `python esptool.py --port=/dev/ttyACM0 --baud 115000 write_flash 0x00000 ESP_Code.ino.generic.bin --flash_size 32m`  
+
 Windows: https://github.com/nodemcu/nodemcu-flasher  
   
 NOTE: Do not try to connect to the access point or test anything yet, the device won't work until after the next step.  
