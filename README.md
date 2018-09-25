@@ -58,10 +58,10 @@ Linux: https://github.com/AprilBrother/esptool
 Open a terminal.  
 
 List available devices ::
-# ls /dev/cu.*
+ex: ls /dev/cu.*
 
 Erase the device BEFORE flashing ::    
-# python esptool.py -p /dev/cu.usbmodemXXXX erase_flash
+ex: python esptool.py -p /dev/cu.usbmodemXXXX erase_flash
 
 < Eject the device >
 
